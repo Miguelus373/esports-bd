@@ -1,0 +1,25 @@
+Descripción del Sistema
+El diseño de esta base de datos debe permitir gestionar la información relacionada con jugadores, equipos, partidas, torneos y estadísticas. Cada jugador tiene un apodo único (nickname), un rol específico (como tanque, soporte o DPS) y pertenece a un equipo. Los equipos, por su parte, tienen un nombre único, un entrenador y un país de origen. Las partidas se juegan en el contexto de un torneo y registran información como la fecha, la duración y el equipo ganador. Además, es necesario almacenar estadísticas detalladas de cada jugador en cada partida, como kills, muertes y asistencias.
+
+El sistema debe ser capaz de generar reportes que permitan analizar el rendimiento de los jugadores y equipos, así como proporcionar información útil para los organizadores de la liga.
+
+Videojuego
+nombre | genero | año_lanzamiento
+
+Torneo: 
+nombre | fecha_inicio | fecha_fin | videojuego_id
+
+Equipo: 
+nombre | entrenador | país
+
+Jugador:
+nombre | nickname | rol | equipo_id  
+
+Partida: 
+fecha | duración | torneo_id | ganador_id | perdedor_id
+
+Estadísticas: 
+partida_id | jugador_id | kills | muertes | asistencias
+
+Participacion:
+torneo_id | equipo_id
